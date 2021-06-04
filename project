@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <string.h>
+#define PI 3.1416
+/*
+double Re(double D, double rho, double u_mean, double mu){
+
+   /*
+    
+    "Re" is reynolds number (dimensionless)
+
+    "D" is pipe diameter (m)
+
+    "rho" is the density of the fluid (SI units: kg/m3)
+    
+    "u_mean" is the mean velocity (m/s)
+
+    "mu" is the dynamic viscosity of the fluid (Pa·s or N·s/m2 or kg/(m·s))
+
+    
+    
+    double Reynolds = (D * rho * u_mean) / mu;  
+    
+    return Reynolds;
+
+}
+
+double ff(double eps, double D, double Re){
+
+   
+    
+    "ff" is friction factor
+
+    "Re" is reynolds number (dimensionless)
+
+    "D" is pipe diameter (m)
+
+    "eps" is pipe surface roughness ratio
+
+    
+    
+    if (Re < 2000){
+
+        ff = 16/Re;
+
+    }
+
+
+    
+    return ;
+
+}
+*/
+
+int main() {
+    
+    int ct; // ct is case type
+
+    char si[]="SI", fps[]="FPS", us[5]; // us is unit system
+
+    double D; // D is diameter of the pipe
+    double Q; // Q is flow rate
+
+    scanf("Please enter the case type: %d \n",&ct);
+
+    scanf("Please enter the unit system you want to use(SI for m/kg/s or FPS for ft/lbm/s): %s \n", us);
+
+    if ( ct == 1)
+    {
+        if(strcmp(us,si) == 0){
+            
+            scanf("Please specify the pipe diameter D (m): %lf",&D);
+
+            scanf("Please specify the flow rate Q (m^3/s): %lf",&Q);
+        }
+
+        else if(strcmp(us,fps) == 0){
+            
+            scanf("Please specify the pipe diameter D (ft): %lf",&D);
+
+            scanf("Please specify the flow rate Q (ft^3/s): %lf",&Q);
+        }
+
+            
+    }
+    
+    
+
+
+
+
+
+
+
+    return 0;
+}
+
